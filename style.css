@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  color: #f4efe6;
+  line-height: 1.6;
+  background-color: #0f0f0f;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("asset/gamepage.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f4efe6;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #7b0000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.story-snippet {
+  background-color: #111;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: auto;
+  font-style: italic;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.features-section {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #1a1a1a;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #c7a17a;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.features-card {
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.features-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.features-card h3 {
+  margin-bottom: 0.8rem;
+  color: #f4efe6;
+}
+
+.features-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.feature-icon {
+  width: 200px;
+  height: auto;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: #111;
+  font-size: 0.85rem;
+  color: #c7a17a;
+  border-top: 1px solid #222;
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .feature-icon {
+    width: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .cta {
+    padding: 0.8rem 2rem;
+  }
+}
