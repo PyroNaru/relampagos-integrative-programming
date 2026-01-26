@@ -199,7 +199,7 @@ img.avatar {
 
 span.psw {
   float: right;
-  padding-top: 16px;
+  padding: 20px;
 }
 
 @media screen and (max-width: 300px) {
@@ -222,6 +222,31 @@ span.psw {
 }
 .btn:hover {
   background-color: #922a2a;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  background-color: #7b0000;
+  float: right;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background-color: #7b0000;
 }
 
 @media (max-width: 768px) {
