@@ -54,7 +54,8 @@ Answer honestly: Did you use AI tools? Yes
 I used DeepSeek for the help with the boilerplate, basic error syntax fixing and css layout. All code from that was reviewed and modified by me. layout ideas and improve wording for the hero section.
 All code was reviewed and modified by me.”
 
-🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+# 🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
 I learned about form syntaxes from html. I also learned proper linking for the webpages that makes it easy to navigate.
 
 ---
+
