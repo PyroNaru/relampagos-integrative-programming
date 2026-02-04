@@ -272,3 +272,110 @@ span.psw {
     padding: 0.8rem 2rem;
   }
 }
+
+.navbar {
+  background: #111;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar h2 {
+  color: #7b0000;
+  font-family: Georgia, serif;
+}
+
+.navbar a {
+  color: #ddd;
+}
+
+.navbar a:hover {
+  color: #c7a17a;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  color: #ddd;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  color: #f4efe6;
+}
+
+.avatar {
+  border: 2px solid #7b0000;
+}
+
+.settings-form input,
+.settings-form select {
+  background: #111;
+  color: #f4efe6;
+  border: 1px solid #333;
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+  outline: none;
+  border-color: #7b0000;
+}
+
+.btn {
+  background-color: #7b0000;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #922a2a;
+}
+
+.btn.secondary {
+  background-color: #333;
+}
+
+.btn.secondary:hover {
+  background-color: #444;
+}
+
+.profile-bg {
+  min-height: 100vh;
+  background-image: url("asset/gamepage.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.profile-content {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-card .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Space below fixed navbar */
+.profile-bg .container {
+  margin-top: 100px;
+}
