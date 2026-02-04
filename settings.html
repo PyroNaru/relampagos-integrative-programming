@@ -4,11 +4,37 @@
     <meta charset="UTF-8" />
     <title>Settings</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .settings-group {
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 1rem;
+      }
+      .settings-group h4 {
+        color: #c7a17a;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-left: 3px solid #7b0000;
+        padding-left: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #ddd;
+        font-weight: bold;
+      }
+      input,
+      select {
+        margin-bottom: 15px !important; /* Force spacing */
+      }
+    </style>
   </head>
-  <body>
-    <!-- Header -->
+  <body class="profile-bg">
     <header class="navbar">
       <h2>Settings</h2>
+      <nav>
+        <a href="profile.html">Back to Profile</a>
+      </nav>
     </header>
 
     <main class="container">
@@ -16,37 +42,72 @@
         <h3>Account Settings</h3>
 
         <form class="settings-form">
-          <label>
-            Change Email
-            <input type="email" placeholder="newemail@example.com" />
-          </label>
+          <div class="settings-group">
+            <h4>Personal Information</h4>
 
-          <label>
-            Change Address
-            <input type="text" placeholder="New Address" />
-          </label>
+            <label>
+              Email Address
+              <input type="email" placeholder="john.bloodborne@example.com" />
+            </label>
 
-          <label>
-            Change Password
-            <input type="password" placeholder="New Password" />
-          </label>
+            <label>
+              Current Address
+              <input type="text" placeholder="Manila, Philippines" />
+            </label>
+          </div>
 
-          <label>
-            Theme(Working Progress)
-            <select>
-              <option>Light</option>
-              <option>Dark</option>
-            </select>
-          </label>
+          <div class="settings-group">
+            <h4>Security</h4>
 
-          <button type="button" class="btn">Save</button>
+            <label>
+              Current Password
+              <input type="password" placeholder="Enter current password" />
+            </label>
+
+            <label>
+              New Password
+              <input type="password" placeholder="Enter new password" />
+            </label>
+
+            <label>
+              Confirm Password
+              <input type="password" placeholder="Re-type new password" />
+            </label>
+          </div>
+
+          <div class="settings-group" style="border-bottom: none">
+            <label>
+              Theme (Work in Progress)
+              <select
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  background: #111;
+                  color: white;
+                  border: 1px solid #ccc;
+                "
+              >
+                <option>Dark Mode</option>
+                <option>Light Mode</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="button" class="btn">Save Changes</button>
+          <br /><br />
+          <a
+            href="profile.html"
+            class="cancelbtn"
+            style="
+              text-decoration: none;
+              color: white;
+              display: inline-block;
+              text-align: center;
+            "
+            >Cancel</a
+          >
         </form>
       </section>
-
-      <!-- Navigation -->
-      <div class="actions">
-        <a href="profile.html" class="btn secondary">Back to Profile</a>
-      </div>
     </main>
   </body>
 </html>
