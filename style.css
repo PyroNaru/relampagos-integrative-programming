@@ -276,15 +276,28 @@ span.psw {
 .navbar {
   background: #111;
   border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 .navbar h2 {
   color: #7b0000;
   font-family: Georgia, serif;
+  margin: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
 }
 
 .navbar a {
   color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
@@ -354,7 +367,9 @@ span.psw {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
 }
 
 .profile-content {
