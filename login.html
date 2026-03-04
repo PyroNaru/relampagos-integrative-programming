@@ -10,17 +10,18 @@
     <section class="hero">
       <div class="hero-content">
         <div class="login">
-          <form action="action_page.php" method="post">
-            <div class="imgcontainer">
-              
-            </div>
+          <form id="loginForm">
+            <div class="imgcontainer"></div>
+
             <h1>Skulkborne</h1>
-            <class="container">
+
+            <div class="container">
               <label for="uname"><b>Username</b></label>
               <input
                 type="text"
                 placeholder="Enter Username"
                 name="uname"
+                id="loginUsername"
                 required
               />
 
@@ -29,22 +30,24 @@
                 type="password"
                 placeholder="Enter Password"
                 name="psw"
+                id="loginPassword"
                 required
               />
 
-              <button onclick="window.location.href='profile.html'" >Login</button>
+              <button type="submit">Login</button>
+
               <div class="container">
                 <label>
-                    <input type="checkbox" checked="checked" name="remember"/>
-                    Remember me
+                  <input type="checkbox" checked="checked" name="remember" />
+                  Remember me
                 </label>
-              <span class="psw"><a href="#">Forgot password?</a></span>
-              <span class="psw"><a href="https://pyronaru.github.io/relampagos-integrative-programming/signup.html">Don't have an account?</a></span>
-              </div>
-              
-            </div>
 
-            
+                <span class="psw"><a href="#">Forgot password?</a></span>
+                <span class="psw">
+                  <a href="signup.html">Don't have an account?</a>
+                </span>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -57,5 +60,7 @@
         actual art so all assets and arts are merely placeholders.
       </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
