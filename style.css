@@ -394,3 +394,24 @@ span.psw {
 .profile-bg .container {
   margin-top: 100px;
 }
+
+button,
+.btn {
+  background:
+    linear-gradient(135) deg,
+    #7b0000,
+    #400000;
+  border: 1px solid #b33;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: linear-gradient(135deg, #a00000, #600000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
