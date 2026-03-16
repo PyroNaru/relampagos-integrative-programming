@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Country Information</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Country Information Search</h1>
+        <p>Search for information about any country.</p>
+        <p>Because why not try to search?</p>
+
+        <div class="api-search">
+          <input
+            type="text"
+            id="countryInput"
+            placeholder="Enter country name"
+          />
+
+          <button onclick="getCountry()">Search</button>
+        </div>
+
+        <div id="result" class="api-result"></div>
+
+        <br />
+        <a href="profile.html" class="btn">Back to Profile</a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

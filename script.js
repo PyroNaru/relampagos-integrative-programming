@@ -119,3 +119,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function getCountry() {
+  const country = document.getElementById("countryInput").value.trim();
+  const result = document.getElementById("result");
+
+  if (country === "") {
+    result.innerHTML = "<p>Please enter a country name.</p>";
+    return;
+  }
+
+  result.innerHTML = "<p>Loading...</p>";
+
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Country not found");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const c = data[0];
+
+      const capital = c.capital ? c.capital[0] : "Unknown";
+
+      result.innerHTML = `
+        <div class="country-card">
+          <h2>${c.name.common}</h2>
+          <img src="${c.flags.png}" alt="Flag of ${c.name.common}">
+          <p><strong>Capital:</strong> ${capital}</p>
+          <p><strong>Region:</strong> ${c.region}</p>
+          <p><strong>Population:</strong> ${c.population.toLocaleString()}</p>
+        </div>
+      `;
+    })
+    .catch((error) => {
+      result.innerHTML = "<p>Country not found or API error.</p>";
+    });
+}
