@@ -146,14 +146,85 @@ function getCountry() {
       result.innerHTML = `
         <div class="country-card">
           <h2>${c.name.common}</h2>
-          <img src="${c.flags.png}" alt="Flag of ${c.name.common}">
+          <img src="${c.flags.png}">
           <p><strong>Capital:</strong> ${capital}</p>
           <p><strong>Region:</strong> ${c.region}</p>
           <p><strong>Population:</strong> ${c.population.toLocaleString()}</p>
+
+          <button onclick="saveCountry(
+            '${c.name.common}',
+            '${capital}',
+            '${c.region}',
+            '${c.population}',
+            '${c.flags.png}'
+          )">Save</button>
         </div>
       `;
     })
     .catch((error) => {
       result.innerHTML = "<p>Country not found or API error.</p>";
     });
+}
+
+function saveCountry(name, capital, region, population, flag) {
+  let saved = JSON.parse(localStorage.getItem("savedCountries")) || [];
+
+  // Prevent duplicates
+  const exists = saved.some((c) => c.name === name);
+
+  if (exists) {
+    alert("Country already saved!");
+    return;
+  }
+
+  const newCountry = {
+    name,
+    capital,
+    region,
+    population,
+    flag,
+  };
+
+  saved.push(newCountry);
+
+  localStorage.setItem("savedCountries", JSON.stringify(saved));
+
+  alert("Saved successfully!");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("savedList");
+
+  if (container) {
+    const saved = JSON.parse(localStorage.getItem("savedCountries")) || [];
+
+    if (saved.length === 0) {
+      container.innerHTML = "<p>No saved items yet.</p>";
+      return;
+    }
+
+    saved.forEach((c) => {
+      container.innerHTML += `
+        <div class="country-card">
+          <h2>${c.name}</h2>
+          <img src="${c.flag}">
+          <p><strong>Capital:</strong> ${c.capital}</p>
+          <p><strong>Region:</strong> ${c.region}</p>
+          <p><strong>Population:</strong> ${Number(c.population).toLocaleString()}</p>
+
+          <button onclick="deleteCountry('${c.name}')">Delete</button>
+        </div>
+      `;
+    });
+  }
+});
+
+function deleteCountry(name) {
+  let saved = JSON.parse(localStorage.getItem("savedCountries")) || [];
+
+  saved = saved.filter((c) => c.name !== name);
+
+  localStorage.setItem("savedCountries", JSON.stringify(saved));
+
+  location.reload();
 }
