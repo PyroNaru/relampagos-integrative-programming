@@ -215,6 +215,7 @@ function getMonster(index) {
         <div class="monster-detail">
           <h2>${m.name}</h2>
           <img src="${getMonsterImage(m.type)}" alt="${m.type}" class="monster-img">
+          <p>no art/images yet</p>
           <p><strong>Species:</strong> ${m.type}</p>
           <p><strong>HP:</strong> ${m.hit_points}</p>
           <p><strong>Threat:</strong> ${getThreatLevel(m.challenge_rating)}</p>
