@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Skulkborne Bestiary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="monster-page">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hunter's Bestiary</h1>
+        <p>
+          A hunter must stay prepared, know what you're up against. Though some
+          information may be lost to time, the knowledge of these creatures can
+          mean the difference between life and death.
+        </p>
+
+        <input type="text" id="searchInput" placeholder="Search creature..." />
+        <button onclick="searchMonster()">Search</button>
+        <button onclick="loadMonsters()">Load Creatures</button>
+
+        <div id="monsterList"></div>
+
+        <br />
+        <a href="saved.html" class="btn">View Saved</a>
+        <a href="profile.html" class="btn">Back to Profile</a>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
