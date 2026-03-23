@@ -217,7 +217,7 @@ function getMonster(index) {
           <p><strong>Species:</strong> ${m.type}</p>
           <p><strong>HP:</strong> ${m.hit_points}</p>
 
-          <p><strong>Threat:</strong> ${m.challenge_rating}
+          <p><strong>Threat:</strong>
           (${getThreatLevel(m.challenge_rating)})</p>
 
           <p><strong>Lore:</strong><br>${generateLore(m)}</p>

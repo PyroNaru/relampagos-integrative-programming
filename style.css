@@ -450,7 +450,8 @@ button:hover,
 #monsterList.details-view {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  min-width: 80vh;
   padding: 40px;
 }
 
